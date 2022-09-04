@@ -1,0 +1,50 @@
+func selection_sort(arr: [Int]) -> [Int] {
+    // Write your code here.
+    
+    
+    var ans = arr
+   
+    
+    
+    for firstSmallElement in 0 ... ans.count - 2 {
+        
+        
+        var smallestElement = ans[firstSmallElement]
+        var smallestElementIndex = firstSmallElement
+        
+        for comparisonIterator in firstSmallElement + 1 ... ans.count - 1 {
+            
+            if smallestElement > ans[comparisonIterator] {
+                
+                smallestElement =  ans[comparisonIterator]
+                smallestElementIndex = comparisonIterator
+                
+                
+                
+                
+            }
+            
+            
+            
+        }
+        
+        var temp = ans[firstSmallElement]
+        ans[firstSmallElement] = smallestElement
+        ans[smallestElementIndex] = temp
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    return ans
+    
+    
+    
+    
+}
+
+print(selection_sort(arr: [1,0,0,0,0,0,0,0,0,0]))
