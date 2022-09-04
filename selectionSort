@@ -1,10 +1,13 @@
+
 func selection_sort(arr: [Int]) -> [Int] {
     // Write your code here.
     
     
     var ans = arr
    
-    
+    if ans.count == 1 || ans.count == 0 {
+        return ans
+    }
     
     for firstSmallElement in 0 ... ans.count - 2 {
         
@@ -12,7 +15,7 @@ func selection_sort(arr: [Int]) -> [Int] {
         var smallestElement = ans[firstSmallElement]
         var smallestElementIndex = firstSmallElement
         
-        for comparisonIterator in firstSmallElement + 1 ... ans.count - 1 {
+        for comparisonIterator in firstSmallElement + 1 ... ans.count - 1 { 
             
             if smallestElement > ans[comparisonIterator] {
                 
@@ -46,5 +49,3 @@ func selection_sort(arr: [Int]) -> [Int] {
     
     
 }
-
-print(selection_sort(arr: [1,0,0,0,0,0,0,0,0,0]))
